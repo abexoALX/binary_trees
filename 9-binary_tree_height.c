@@ -14,6 +14,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 
 }
+/**
+ * heightcalc - calculate the height of a binary tree
+ * @tree: pointer to the node of the tree to measure the height
+ * Return: return the height of the binary tree interms of int data type
+ */
 int heightcalc(const binary_tree_t *tree)
 {
 	if(tree == NULL)
