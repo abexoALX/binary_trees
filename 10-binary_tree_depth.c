@@ -14,6 +14,11 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 	size_t depth = depthcalc(tree);
 	return (depth);
 }
+/**
+ * depthcalc - calculate the depth of the binary tree
+ * @tree: pointer to the node to measure the depth
+ * Return: return the depth in int data type
+ */
 int depthcalc(const binary_tree_t *tree)
 {
 	if(tree == NULL )
