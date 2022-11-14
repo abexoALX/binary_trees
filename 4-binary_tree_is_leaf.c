@@ -2,7 +2,7 @@
 /**
  * binary_tree_is_leaf - check whther a node is aleaf or not
  * @node: a pointer to a node to check
- * @Retrun: 1 if the node is a leaf node
+ * Retrun: 1 if the node is a leaf node
  * Other wise return 0
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
