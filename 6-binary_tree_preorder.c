@@ -1,9 +1,11 @@
 #include"binary_trees.h"
 
 /**
- *binary_tree_preorder - print tree preoder traversal
- *@tree : is a pointer to the root node of the tree to traverse
- *@func : is a pointer to a function to call for each node.
+ * binary_tree_preorder - print tree preoder traversal
+ * @tree : is a pointer to the root node of the tree to traverse
+ * @func : is a pointer to a function to call for each node.
+ * Description: pre-order traverses from Root node, Left node then Right node
+ * Return: nothing
 */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
