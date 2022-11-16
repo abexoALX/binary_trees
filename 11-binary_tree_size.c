@@ -7,17 +7,14 @@
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
+	size_t max = 0;
+
 	if (tree)
 	{
-		size_t sizel = 0, sizer = 0;
-		
-		size_t max = 0;
-
-		sizel = tree->left ? binary_tree_size(tree->left) + 1 : 0;
-		sizer = tree->right ? binary_tree_size(tree->right) + 1 : 0;
-		max = sizel + sizer;
-		return (max);
+		max += 1;
+		max += binary_tree_size(tree->left);
+		max += binary_tree_size(tree->right);
 	}
 
-	return (0);
+	return (max);
 }
