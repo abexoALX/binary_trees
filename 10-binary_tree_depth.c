@@ -3,32 +3,16 @@
 /**
  * binary_tree_depth - depth of the binary tree from the specified node
  * @tree: pointer to the node to measure the depth
- * Return: NULL if tree is null else the depth in terms of size_t
+ * Return: If tree is NULL, your function must return 0, else return depth.
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	if (tree == NULL)
+	if (tree)
 	{
-		return (0);
-	}
-	size_t depth = 0;
+		size_t depth = 0;
 
-	depth = depthcalc(tree);
-	return (depth);
-}
-/**
- * depthcalc - calculate the depth of the binary tree
- * @tree: pointer to the node to measure the depth
- * Return: NULL if tree is null else the depth in int data type
- */
-int depthcalc(const binary_tree_t *tree)
-{
-	if (tree == NULL)
-	{
-		return (-1);
+		depth = tree->parent ? binary_tree_depth(tree->parent) + 1 : 0;
+		return (depth);
 	}
-	int depth = 0;
-
-	depth = depthcalc(tree->parent) + 1;
-	return (depth);
+	return (0);
 }
